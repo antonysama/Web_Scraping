@@ -5,7 +5,7 @@ from scrapy.spiders import CrawlSpider, Rule
 
 
 class News4CrawlSpider(CrawlSpider):
-    name = 'news4b_crawl'
+    name = 'news_bc_gov_crawl'
     allowed_domains = ['news.gov.bc.ca']
     start_urls = ['https://archive.news.gov.bc.ca']
 
