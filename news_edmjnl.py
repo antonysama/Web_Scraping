@@ -5,7 +5,7 @@ from scrapy.spiders import CrawlSpider, Rule
 
 
 class News4CrawlSpider(CrawlSpider):
-    name = 'news_cbc_crawl'
+    name = 'news_edmjnl_crawl'
     allowed_domains = ['edmontonjournal.com']
     start_urls = ['https://edmontonjournal.com']
 
