@@ -20,3 +20,4 @@ class News4CrawlSpider(CrawlSpider):
             'date': response.xpath('//*[@class="published-date__since"]/text()').get(),
             'text': response.xpath('//*[@class="article-content"]//p[normalize-space(text())]/text()').getall(), 
         }
+# the last line including the getall gets all the text.
