@@ -18,5 +18,5 @@ class News4CrawlSpider(CrawlSpider):
         yield{
             'title': response.xpath('//*[@class="article-title"]/text()').get(),
             'date': response.xpath('//*[@class="published-date__since"]/text()').get(),
-            'text': response.xpath('//*[@class="article-content"]/p/text()').get(), 
+            'text': response.xpath('//*[@class="article-content"]//p[normalize-space(text())]/text()').getall(), 
         }
