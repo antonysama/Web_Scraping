@@ -12,4 +12,5 @@ CMD bash -c "scrapy runspider edmjnl.py -o file.csv && scrapy runspider post.py 
 #runs multiple python files https://intellipaat.com/community/19590/docker-run-multiple-commands-using-docker-compose-at-once
 # build image w., sudo docker build --tag test .
 # run w., sudo docker run -v /home/antony/scrapy:/app 0132a1b91cf7
+# execute in order to run your docker without sudo, https://docs.docker.com/engine/install/linux-postinstall/
 
