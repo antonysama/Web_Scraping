@@ -10,4 +10,6 @@ RUN pip3 install -r requirements.txt
 COPY ./ /app/  
 CMD bash -c "scrapy runspider edmjnl.py -o file.csv && scrapy runspider post.py -o file2.csv"
 #runs multiple python files https://intellipaat.com/community/19590/docker-run-multiple-commands-using-docker-compose-at-once
+# build image w., sudo docker build --tag test .
+# run w., sudo docker run -v /home/antony/scrapy:/app 0132a1b91cf7
 
