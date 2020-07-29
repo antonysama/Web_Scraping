@@ -8,7 +8,11 @@ WORKDIR /app
 COPY requirements.txt /app/     
 RUN pip3 install -r requirements.txt
 COPY ./ /app/  
-CMD ["/bin/bash", "-c", "scrapy runspider edmjnl.py -o file.csv && scrapy runspider post.py -o file2.csv"]
+CMD bash -c "scrapy runspider edm.py -o f.csv \
+    ; scrapy runspider cgy.py -o f.csv \
+    ; scrapy runspider globe.py -o f.csv \
+    ; scrapy runspider post.py  -o f.csv \
+"
 #alternative: CMD bash -c "scrapy runspider edmjnl.py -o file.csv && scrapy runspider post.py -o file2.csv"
 # instructions: 1. build image w., sudo docker build --tag test .  2. run w., sudo docker run -v /home/antonysama/docker_scrapy:/app [image no.]
 #references: runs multiple python files https://stackoverflow.com/questions/30063907/using-docker-compose-how-to-execute-multiple-commands https://intellipaat.com/community/19590/docker-run-multiple-commands-using-docker-compose-at-once
